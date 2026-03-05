@@ -1,0 +1,101 @@
+site_name: PRISM — 公共卫生间智能清洁机器人
+site_description: Public Restroom Intelligent Sanitation Machine 项目文档
+site_author: PRISM Team
+
+repo_url: ""
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - mermaid2:
+      arguments:
+        theme: default
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social: []
+  generator: false
+
+copyright: Copyright &copy; 2026 PRISM Team
+
+nav:
+  - 首页: index.md
+  - 平台维度:
+      - 项目概述与总体流程: platform/00-项目概述与总体流程.md
+      - 需求分析: platform/01-需求分析.md
+      - 可行性分析: platform/02-可行性分析.md
+      - 功能梳理: platform/03-功能梳理.md
+      - 技术选型: platform/04-技术选型.md
+      - 项目规划与里程碑: platform/05-项目规划与里程碑.md
+  - 机器人维度:
+      - 机器人需求分析: robot/06-机器人需求分析.md
+      - 机器人形态探究: robot/07-机器人形态探究.md
+      - 功能定义与系统架构: robot/08-机器人功能定义与系统架构.md
+      - 机器人技术选型: robot/09-机器人技术选型.md
+      - 研发规划与里程碑: robot/10-机器人研发规划与里程碑.md
